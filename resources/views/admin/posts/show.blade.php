@@ -3,7 +3,8 @@
 @section('content')
     <div class="container">
         <h1>{{ $post->title }}</h1>
-        <img src="{{ $post->image }}" alt="{{ $post->title }}">
+        <h2>Nella categoria: {{ $post->category->name }}</h2>
+        <img src="{{ asset('storage/' . $post->uploaded_img) }}" alt="{{ $post->title }}">
         <p>
             {{ $post->content }}
         </p>
